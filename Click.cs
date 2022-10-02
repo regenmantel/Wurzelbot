@@ -33,5 +33,11 @@ namespace Wurzelbot
             mouse_event((int)(MouseEventFlags.LEFTDOWN), 0, 0, 0, 0);
             mouse_event((int)(MouseEventFlags.LEFTUP), 0, 0, 0, 0);
         }
+
+        public void move(Point p)
+        {
+            Cursor.Position = p;
+            mouse_event((int)(MouseEventFlags.MOVE), 0, 0, 0, 0);
+        }
     }
 }
