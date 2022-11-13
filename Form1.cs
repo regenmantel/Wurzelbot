@@ -67,7 +67,6 @@ namespace Wurzelbot
             bool go = true;
 
             Point p = new Point();
-
             p.X = 1425;
             p.Y = 300;
 
