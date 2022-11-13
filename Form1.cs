@@ -3,9 +3,9 @@ using System.Threading;
 
 namespace Wurzelbot
 {
-    public partial class Form1 : Form
+    public partial class WurzelBot : Form
     {
-        public Form1()
+        public WurzelBot()
         {
             InitializeComponent();
         }
@@ -17,19 +17,15 @@ namespace Wurzelbot
 
         private void btnWasser_Click_1(object sender, EventArgs e)
         {
-            Point p = new Point();
-            p.X = 1425;
-            p.Y = 300;
-
-            c.leftClick(p);
+            Giessen();
         }
 
         private void btnGO_Click(object sender, EventArgs e)
         {
-            GOGO();
+            Pflanzen();
         }
 
-        public void GOGO()
+        public void Pflanzen()
         {
             bool go = true;
             
@@ -56,7 +52,48 @@ namespace Wurzelbot
                     p.Y = 390;
                 }
 
-                
+                c.leftClick(p);
+            }
+        }
+
+        public void Giessen()
+        {
+            bool go = true;
+
+            Point p = new Point();
+
+            p.X = 1425;
+            p.Y = 300;
+
+            c.move(p);
+            c.leftClick(p);
+
+            Thread.Sleep(2000);
+
+            p.X = 1070;
+            p.Y = 350;
+
+            c.move(p);
+            c.leftClick(p);
+
+            int xEnd = 1710;
+            int yEnd = 830;
+
+            while (go)
+            {
+                if (p.X == xEnd && p.Y == yEnd)
+                    go = false;
+
+                p.Y += 40;
+                Thread.Sleep(Convert.ToInt32(cBoxSpeed.Items[cBoxSpeed.SelectedIndex].ToString()));
+
+                if (p.Y > yEnd)
+                {
+                    p.X += 40;
+                    p.Y = 390;
+                }
+
+                c.leftClick(p);
             }
         }
 
