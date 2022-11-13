@@ -16,7 +16,6 @@ namespace Wurzelbot
         Gesamt Screen : 0px x 0px -> 2560px x 1080px (Widescreen)
         Gießen 1425 x 300;
         Feld Start: 1070 x 390
-        nach unten!!
         +40 für jedes Feld
         */
 
