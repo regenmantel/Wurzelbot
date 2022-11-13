@@ -2,6 +2,4 @@
 
 Wurzelbot zum Pflanzen und Bewässern des Gartens.
 
-Pflanzenauswahl demnächst
-
-![tt](https://user-images.githubusercontent.com/20355730/193465400-76265046-9b2b-47a1-b033-f416cdf465de.png)
+![WurzelBot](https://user-images.githubusercontent.com/20355730/201538575-eab519de-c8e7-4c4e-aa76-4d7504e06d6c.png)
