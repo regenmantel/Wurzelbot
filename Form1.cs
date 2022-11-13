@@ -10,10 +10,17 @@ namespace Wurzelbot
             InitializeComponent();
         }
 
+        /*
+        Notes:
+
+        Gesamt Screen : 0px x 0px -> 2560px x 1080px (Widescreen)
+        Gieﬂen 1425 x 300;
+        Feld Start: 1070 x 390
+        nach unten!!
+        +40 f¸r jedes Feld
+        */
+
         Click c = new Click();
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
 
         private void btnWasser_Click_1(object sender, EventArgs e)
         {
@@ -96,38 +103,5 @@ namespace Wurzelbot
                 c.leftClick(p);
             }
         }
-
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Application.Exit();
-        }
-
-
-        /*
-        Notes:
-
-        Gesamt Screen : 0px x 0px -> 2560px x 1080px
-
-
-        Gieﬂen 1425 x 300;
-
-
-        Feld: 1070 x 390
-
-        nach unten!!
-        +40 nach links und rechts
-
-        430
-        470
-        510
-        550
-        590
-        630
-        670
-        710
-        750
-        790
-        830
-        */
     }
 }
