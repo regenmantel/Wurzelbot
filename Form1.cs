@@ -34,31 +34,61 @@ namespace Wurzelbot
         public void Pflanzen()
         {
             bool go = true;
-            
+
             Point p = new Point();
             p.X = 1070;
             p.Y = 390;
 
-            int xEnd = 1710;
+            int xEnd = 1750;
             int yEnd = 830;
 
             while (go)
             {
-                if (p.X == xEnd && p.Y == yEnd)
-                    go = false;
-
-                c.move(p);
-
-                p.Y += 40;
-                Thread.Sleep(Convert.ToInt32(cBoxSpeed.Items[cBoxSpeed.SelectedIndex].ToString()));
-
-                if (p.Y > yEnd)
+                if (p.X >= xEnd && p.Y == 390)
                 {
-                    p.X += 40;
-                    p.Y = 390;
+                    go = false;
                 }
+                else
+                {
+                    c.move(p);
 
-                c.leftClick(p);
+                    if (Convert.ToInt32(cBoxFields.Items[cBoxFields.SelectedIndex]) == 1)
+                    {
+                        c.leftClick(p);
+                        p.Y += 40;
+                        Thread.Sleep(Convert.ToInt32(cBoxSpeed.Items[cBoxSpeed.SelectedIndex].ToString()));
+
+                        if (p.Y > yEnd)
+                        {
+                            p.X += 40;
+                            p.Y = 390;
+                        }
+                    }
+                    else if (Convert.ToInt32(cBoxFields.Items[cBoxFields.SelectedIndex]) == 2)
+                    {
+                        c.leftClick(p);
+                        p.Y += 40;
+                        Thread.Sleep(Convert.ToInt32(cBoxSpeed.Items[cBoxSpeed.SelectedIndex].ToString()));
+
+                        if (p.Y > yEnd)
+                        {
+                            p.X += 80;
+                            p.Y = 390;
+                        }
+                    }
+                    else if (Convert.ToInt32(cBoxFields.Items[cBoxFields.SelectedIndex]) == 4)
+                    {
+                        c.leftClick(p);
+                        p.Y += 80;
+                        Thread.Sleep(Convert.ToInt32(cBoxSpeed.Items[cBoxSpeed.SelectedIndex].ToString()));
+
+                        if (p.Y > yEnd)
+                        {
+                            p.X += 80;
+                            p.Y = 390;
+                        }
+                    }
+                }
             }
         }
 
@@ -100,6 +130,11 @@ namespace Wurzelbot
 
                 c.leftClick(p);
             }
+        }
+
+        private void WurzelBot_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

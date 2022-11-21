@@ -43,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.cBoxFields = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -70,7 +72,6 @@
             // 
             // cBoxSpeed
             // 
-            resources.ApplyResources(this.cBoxSpeed, "cBoxSpeed");
             this.cBoxSpeed.FormattingEnabled = true;
             this.cBoxSpeed.Items.AddRange(new object[] {
             resources.GetString("cBoxSpeed.Items"),
@@ -82,6 +83,7 @@
             resources.GetString("cBoxSpeed.Items6"),
             resources.GetString("cBoxSpeed.Items7"),
             resources.GetString("cBoxSpeed.Items8")});
+            resources.ApplyResources(this.cBoxSpeed, "cBoxSpeed");
             this.cBoxSpeed.Name = "cBoxSpeed";
             // 
             // lblTime
@@ -146,10 +148,27 @@
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
+            // cBoxFields
+            // 
+            this.cBoxFields.FormattingEnabled = true;
+            this.cBoxFields.Items.AddRange(new object[] {
+            resources.GetString("cBoxFields.Items"),
+            resources.GetString("cBoxFields.Items1"),
+            resources.GetString("cBoxFields.Items2")});
+            resources.ApplyResources(this.cBoxFields, "cBoxFields");
+            this.cBoxFields.Name = "cBoxFields";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
             // WurzelBot
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cBoxFields);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -168,6 +187,7 @@
             this.HelpButton = true;
             this.KeyPreview = true;
             this.Name = "WurzelBot";
+            this.Load += new System.EventHandler(this.WurzelBot_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -192,5 +212,7 @@
         private Label label5;
         private Label label6;
         private Label label7;
+        private ComboBox cBoxFields;
+        private Label label8;
     }
 }
