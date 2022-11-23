@@ -40,6 +40,9 @@
             this.cBoxFields = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
+            this.rBtnNormalScreen = new System.Windows.Forms.RadioButton();
+            this.rBtnWideScreen = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -125,12 +128,34 @@
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
+            // rBtnNormalScreen
+            // 
+            resources.ApplyResources(this.rBtnNormalScreen, "rBtnNormalScreen");
+            this.rBtnNormalScreen.Name = "rBtnNormalScreen";
+            this.rBtnNormalScreen.TabStop = true;
+            this.rBtnNormalScreen.UseVisualStyleBackColor = true;
+            // 
+            // rBtnWideScreen
+            // 
+            resources.ApplyResources(this.rBtnWideScreen, "rBtnWideScreen");
+            this.rBtnWideScreen.Name = "rBtnWideScreen";
+            this.rBtnWideScreen.TabStop = true;
+            this.rBtnWideScreen.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
             // WurzelBot
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.rBtnWideScreen);
+            this.Controls.Add(this.rBtnNormalScreen);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cBoxFields);
@@ -147,6 +172,7 @@
             this.KeyPreview = true;
             this.Name = "WurzelBot";
             this.Load += new System.EventHandler(this.WurzelBot_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WurzelBot_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -168,5 +194,8 @@
         private ComboBox cBoxFields;
         private Label label8;
         private Button btnHelp;
+        private RadioButton rBtnNormalScreen;
+        private RadioButton rBtnWideScreen;
+        private Label label2;
     }
 }

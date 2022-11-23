@@ -35,12 +35,33 @@ namespace Wurzelbot
         {
             bool go = true;
 
-            Point p = new Point();
-            p.X = 1070;
-            p.Y = 390;
+            int yStart = 0;
+            int xStart = 0;
+            int xEnd = 0;
+            int yEnd = 0;
 
-            int xEnd = 1750;
-            int yEnd = 830;
+            if (rBtnWideScreen.Checked == true)
+            {
+                yStart = 1070;
+                xStart = 390;
+
+                xEnd = 1750;
+                yEnd = 830;
+            }
+            else if (rBtnNormalScreen.Checked == true)
+            {
+                yStart = 760;
+                xStart = 450;
+
+                xEnd = 1440;
+                yEnd = 830;
+            }
+
+            Point p = new Point();
+            p.X = yStart;
+            p.Y = xStart;
+
+            
 
             while (go)
             {
@@ -96,9 +117,31 @@ namespace Wurzelbot
         {
             bool go = true;
 
+            int yStart = 0;
+            int xStart = 0;
+            int xEnd = 0;
+            int yEnd = 0;
+
+            if (rBtnWideScreen.Checked == true)
+            {
+                yStart = 1070;
+                xStart = 390;
+
+                xEnd = 1750;
+                yEnd = 830;
+            }
+            else if (rBtnNormalScreen.Checked == true)
+            {
+                yStart = 760;
+                xStart = 450;
+
+                xEnd = 1440;
+                yEnd = 830;
+            }
+
             Point p = new Point();
-            p.X = 1425;
-            p.Y = 300;
+            p.X = xStart;
+            p.Y = yStart;
 
             c.move(p);
             c.leftClick(p);
@@ -107,9 +150,6 @@ namespace Wurzelbot
 
             p.X = 1070;
             p.Y = 390;
-
-            int xEnd = 1750;
-            int yEnd = 830;
 
             while (go)
             {
@@ -163,13 +203,20 @@ namespace Wurzelbot
 
         private void WurzelBot_Load(object sender, EventArgs e)
         {
-
+            rBtnNormalScreen.Checked = true;
+            cBoxFields.SelectedIndex = 0;
+            cBoxSpeed.SelectedIndex = 0;
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
             Form2 help = new Form2();
             help.Show();
+        }
+
+        private void WurzelBot_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
