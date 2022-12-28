@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WurzelBot));
-            this.btnWasser = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGO = new System.Windows.Forms.Button();
             this.cBoxSpeed = new System.Windows.Forms.ComboBox();
             this.lblTime = new System.Windows.Forms.Label();
@@ -43,23 +41,9 @@
             this.rBtnNormalScreen = new System.Windows.Forms.RadioButton();
             this.rBtnWideScreen = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnWasser
-            // 
-            resources.ApplyResources(this.btnWasser, "btnWasser");
-            this.btnWasser.Name = "btnWasser";
-            this.btnWasser.UseVisualStyleBackColor = true;
-            this.btnWasser.Click += new System.EventHandler(this.btnWasser_Click_1);
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // btnGO
             // 
@@ -165,15 +149,12 @@
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.cBoxSpeed);
             this.Controls.Add(this.btnGO);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnWasser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.KeyPreview = true;
             this.Name = "WurzelBot";
             this.Load += new System.EventHandler(this.WurzelBot_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WurzelBot_KeyPress);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -182,9 +163,6 @@
         }
 
         #endregion
-
-        private Button btnWasser;
-        private PictureBox pictureBox1;
         private Button btnGO;
         private ComboBox cBoxSpeed;
         private Label lblTime;
