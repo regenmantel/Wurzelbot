@@ -2,8 +2,4 @@
 
 Wurzelbot zum Pflanzen und Bewässern des Gartens.
 
-TO-DO: 
-
-
-kein aktuelle bild!
-![WurzelBot](https://user-images.githubusercontent.com/20355730/201538575-eab519de-c8e7-4c4e-aa76-4d7504e06d6c.png)
+![image](https://user-images.githubusercontent.com/20355730/209871735-2b574690-b488-4f4e-831b-e6be99c09380.png)
