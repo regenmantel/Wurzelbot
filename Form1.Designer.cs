@@ -41,6 +41,7 @@
             this.rBtnNormalScreen = new System.Windows.Forms.RadioButton();
             this.rBtnWideScreen = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnGiessen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -131,12 +132,20 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
+            // btnGiessen
+            // 
+            resources.ApplyResources(this.btnGiessen, "btnGiessen");
+            this.btnGiessen.Name = "btnGiessen";
+            this.btnGiessen.UseVisualStyleBackColor = true;
+            this.btnGiessen.Click += new System.EventHandler(this.btnGiessen_Click);
+            // 
             // WurzelBot
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.btnGiessen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rBtnWideScreen);
             this.Controls.Add(this.rBtnNormalScreen);
@@ -175,5 +184,6 @@
         private RadioButton rBtnNormalScreen;
         private RadioButton rBtnWideScreen;
         private Label label2;
+        private Button btnGiessen;
     }
 }

@@ -21,17 +21,29 @@ namespace Wurzelbot
 
         Click c = new Click();
 
-        private void btnWasser_Click_1(object sender, EventArgs e)
+        private void btnGiessen_Click(object sender, EventArgs e)
         {
-            Giessen();
+            Point p = new Point();
+            p.X = 1100;
+            p.Y = 300;
+
+            c.leftClick(p);
+            Thread.Sleep(1000);
+            run();
         }
 
         private void btnGO_Click(object sender, EventArgs e)
         {
-            Pflanzen();
+            Point p = new Point();
+            p.X = 1000;
+            p.Y = 300;
+
+            c.leftClick(p);
+            Thread.Sleep(1000);
+            run();
         }
 
-        public void Pflanzen()
+        public void run()
         {
             bool go = true;
 
@@ -51,105 +63,16 @@ namespace Wurzelbot
             else if (rBtnNormalScreen.Checked == true)
             {
                 yStart = 760;
-                xStart = 450;
+                xStart = 410;
 
                 xEnd = 1440;
-                yEnd = 830;
+                yEnd = 850;
             }
 
             Point p = new Point();
+
             p.X = yStart;
             p.Y = xStart;
-
-            
-
-            while (go)
-            {
-                if (p.X >= xEnd && p.Y == 390)
-                {
-                    go = false;
-                }
-                else
-                {
-                    c.move(p);
-
-                    if (Convert.ToInt32(cBoxFields.Items[cBoxFields.SelectedIndex]) == 1)
-                    {
-                        c.leftClick(p);
-                        p.Y += 40;
-                        Thread.Sleep(Convert.ToInt32(cBoxSpeed.Items[cBoxSpeed.SelectedIndex].ToString()));
-
-                        if (p.Y > yEnd)
-                        {
-                            p.X += 40;
-                            p.Y = 390;
-                        }
-                    }
-                    else if (Convert.ToInt32(cBoxFields.Items[cBoxFields.SelectedIndex]) == 2)
-                    {
-                        c.leftClick(p);
-                        p.Y += 40;
-                        Thread.Sleep(Convert.ToInt32(cBoxSpeed.Items[cBoxSpeed.SelectedIndex].ToString()));
-
-                        if (p.Y > yEnd)
-                        {
-                            p.X += 80;
-                            p.Y = 390;
-                        }
-                    }
-                    else if (Convert.ToInt32(cBoxFields.Items[cBoxFields.SelectedIndex]) == 4)
-                    {
-                        c.leftClick(p);
-                        p.Y += 80;
-                        Thread.Sleep(Convert.ToInt32(cBoxSpeed.Items[cBoxSpeed.SelectedIndex].ToString()));
-
-                        if (p.Y > yEnd)
-                        {
-                            p.X += 80;
-                            p.Y = 390;
-                        }
-                    }
-                }
-            }
-        }
-
-        public void Giessen()
-        {
-            bool go = true;
-
-            int yStart = 0;
-            int xStart = 0;
-            int xEnd = 0;
-            int yEnd = 0;
-
-            if (rBtnWideScreen.Checked == true)
-            {
-                yStart = 1070;
-                xStart = 390;
-
-                xEnd = 1750;
-                yEnd = 830;
-            }
-            else if (rBtnNormalScreen.Checked == true)
-            {
-                yStart = 760;
-                xStart = 450;
-
-                xEnd = 1440;
-                yEnd = 830;
-            }
-
-            Point p = new Point();
-            p.X = xStart;
-            p.Y = yStart;
-
-            c.move(p);
-            c.leftClick(p);
-
-            Thread.Sleep(2000);
-
-            p.X = 1070;
-            p.Y = 390;
 
             while (go)
             {

@@ -11,7 +11,7 @@ namespace Wurzelbot
     {
         [DllImport("user32.dll")]
         static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
-
+        
         [Flags] 
         public enum MouseEventFlags
         {
