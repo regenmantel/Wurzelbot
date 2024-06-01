@@ -1,0 +1,26 @@
+{
+  "Normal": {
+    "startX": 410,
+    "startY": 760,
+    "endX": 1440,
+    "endY": 850,
+    "plantX": 1370,
+    "plantY": 300,
+    "harvestX": 1370,
+    "harvestY": 300,
+    "waterX": 1430,
+    "waterY": 300
+  },
+  "Bigger": {
+    "startX": 390,
+    "startY": 1070,
+    "endX": 1750,
+    "endY": 830,
+    "plantX": 1310,
+    "plantY": 300,
+    "harvestX": 1370,
+    "harvestY": 300,
+    "waterX": 1430,
+    "waterY": 300
+  }
+}
