@@ -29,150 +29,137 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WurzelBot));
-            this.btnGO = new System.Windows.Forms.Button();
-            this.cBoxSpeed = new System.Windows.Forms.ComboBox();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.cBoxFields = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.rBtnNormalScreen = new System.Windows.Forms.RadioButton();
-            this.rBtnWideScreen = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnGiessen = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.SuspendLayout();
+            btnPlant = new Button();
+            cBoxSpeed = new ComboBox();
+            lblTime = new Label();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            pictureBox3 = new PictureBox();
+            cBoxFields = new ComboBox();
+            label8 = new Label();
+            rBtnNormalScreen = new RadioButton();
+            rBtnWideScreen = new RadioButton();
+            label2 = new Label();
+            btnWater = new Button();
+            btnHarvest = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            SuspendLayout();
             // 
-            // btnGO
+            // btnPlant
             // 
-            resources.ApplyResources(this.btnGO, "btnGO");
-            this.btnGO.Name = "btnGO";
-            this.btnGO.UseVisualStyleBackColor = true;
-            this.btnGO.Click += new System.EventHandler(this.btnGO_Click);
+            resources.ApplyResources(btnPlant, "btnPlant");
+            btnPlant.Name = "btnPlant";
+            btnPlant.UseVisualStyleBackColor = true;
+            btnPlant.Click += btnPlant_Click;
             // 
             // cBoxSpeed
             // 
-            this.cBoxSpeed.FormattingEnabled = true;
-            this.cBoxSpeed.Items.AddRange(new object[] {
-            resources.GetString("cBoxSpeed.Items"),
-            resources.GetString("cBoxSpeed.Items1"),
-            resources.GetString("cBoxSpeed.Items2"),
-            resources.GetString("cBoxSpeed.Items3"),
-            resources.GetString("cBoxSpeed.Items4"),
-            resources.GetString("cBoxSpeed.Items5"),
-            resources.GetString("cBoxSpeed.Items6"),
-            resources.GetString("cBoxSpeed.Items7"),
-            resources.GetString("cBoxSpeed.Items8")});
-            resources.ApplyResources(this.cBoxSpeed, "cBoxSpeed");
-            this.cBoxSpeed.Name = "cBoxSpeed";
+            cBoxSpeed.FormattingEnabled = true;
+            cBoxSpeed.Items.AddRange(new object[] { resources.GetString("cBoxSpeed.Items"), resources.GetString("cBoxSpeed.Items1"), resources.GetString("cBoxSpeed.Items2"), resources.GetString("cBoxSpeed.Items3"), resources.GetString("cBoxSpeed.Items4"), resources.GetString("cBoxSpeed.Items5"), resources.GetString("cBoxSpeed.Items6"), resources.GetString("cBoxSpeed.Items7"), resources.GetString("cBoxSpeed.Items8") });
+            resources.ApplyResources(cBoxSpeed, "cBoxSpeed");
+            cBoxSpeed.Name = "cBoxSpeed";
             // 
             // lblTime
             // 
-            resources.ApplyResources(this.lblTime, "lblTime");
-            this.lblTime.Name = "lblTime";
+            resources.ApplyResources(lblTime, "lblTime");
+            lblTime.Name = "lblTime";
             // 
             // pictureBox2
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            resources.ApplyResources(pictureBox2, "pictureBox2");
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.TabStop = false;
             // 
             // label1
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
             // 
             // pictureBox3
             // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
+            resources.ApplyResources(pictureBox3, "pictureBox3");
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.TabStop = false;
             // 
             // cBoxFields
             // 
-            this.cBoxFields.FormattingEnabled = true;
-            this.cBoxFields.Items.AddRange(new object[] {
-            resources.GetString("cBoxFields.Items"),
-            resources.GetString("cBoxFields.Items1"),
-            resources.GetString("cBoxFields.Items2")});
-            resources.ApplyResources(this.cBoxFields, "cBoxFields");
-            this.cBoxFields.Name = "cBoxFields";
+            cBoxFields.FormattingEnabled = true;
+            cBoxFields.Items.AddRange(new object[] { resources.GetString("cBoxFields.Items"), resources.GetString("cBoxFields.Items1"), resources.GetString("cBoxFields.Items2") });
+            resources.ApplyResources(cBoxFields, "cBoxFields");
+            cBoxFields.Name = "cBoxFields";
             // 
             // label8
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // btnHelp
-            // 
-            resources.ApplyResources(this.btnHelp, "btnHelp");
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.UseVisualStyleBackColor = true;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            resources.ApplyResources(label8, "label8");
+            label8.Name = "label8";
             // 
             // rBtnNormalScreen
             // 
-            resources.ApplyResources(this.rBtnNormalScreen, "rBtnNormalScreen");
-            this.rBtnNormalScreen.Name = "rBtnNormalScreen";
-            this.rBtnNormalScreen.TabStop = true;
-            this.rBtnNormalScreen.UseVisualStyleBackColor = true;
+            resources.ApplyResources(rBtnNormalScreen, "rBtnNormalScreen");
+            rBtnNormalScreen.Name = "rBtnNormalScreen";
+            rBtnNormalScreen.TabStop = true;
+            rBtnNormalScreen.UseVisualStyleBackColor = true;
             // 
             // rBtnWideScreen
             // 
-            resources.ApplyResources(this.rBtnWideScreen, "rBtnWideScreen");
-            this.rBtnWideScreen.Name = "rBtnWideScreen";
-            this.rBtnWideScreen.TabStop = true;
-            this.rBtnWideScreen.UseVisualStyleBackColor = true;
+            resources.ApplyResources(rBtnWideScreen, "rBtnWideScreen");
+            rBtnWideScreen.Name = "rBtnWideScreen";
+            rBtnWideScreen.TabStop = true;
+            rBtnWideScreen.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
             // 
-            // btnGiessen
+            // btnWater
             // 
-            resources.ApplyResources(this.btnGiessen, "btnGiessen");
-            this.btnGiessen.Name = "btnGiessen";
-            this.btnGiessen.UseVisualStyleBackColor = true;
-            this.btnGiessen.Click += new System.EventHandler(this.btnGiessen_Click);
+            resources.ApplyResources(btnWater, "btnWater");
+            btnWater.Name = "btnWater";
+            btnWater.UseVisualStyleBackColor = true;
+            btnWater.Click += btnWater_Click;
+            // 
+            // btnHarvest
+            // 
+            resources.ApplyResources(btnHarvest, "btnHarvest");
+            btnHarvest.Name = "btnHarvest";
+            btnHarvest.UseVisualStyleBackColor = true;
+            btnHarvest.Click += btnHarvest_Click;
             // 
             // WurzelBot
             // 
-            this.AllowDrop = true;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            AllowDrop = true;
+            AutoScaleMode = AutoScaleMode.None;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.btnGiessen);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.rBtnWideScreen);
-            this.Controls.Add(this.rBtnNormalScreen);
-            this.Controls.Add(this.btnHelp);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.cBoxFields);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.cBoxSpeed);
-            this.Controls.Add(this.btnGO);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.HelpButton = true;
-            this.KeyPreview = true;
-            this.Name = "WurzelBot";
-            this.Load += new System.EventHandler(this.WurzelBot_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WurzelBot_KeyPress);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            Controls.Add(btnHarvest);
+            Controls.Add(btnWater);
+            Controls.Add(label2);
+            Controls.Add(rBtnWideScreen);
+            Controls.Add(rBtnNormalScreen);
+            Controls.Add(label8);
+            Controls.Add(cBoxFields);
+            Controls.Add(pictureBox3);
+            Controls.Add(label1);
+            Controls.Add(pictureBox2);
+            Controls.Add(lblTime);
+            Controls.Add(cBoxSpeed);
+            Controls.Add(btnPlant);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            HelpButton = true;
+            KeyPreview = true;
+            Name = "WurzelBot";
+            Load += WurzelBot_Load;
+            KeyPress += WurzelBot_KeyPress;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private Button btnGO;
+        private Button btnPlant;
         private ComboBox cBoxSpeed;
         private Label lblTime;
         private PictureBox pictureBox2;
@@ -180,10 +167,10 @@
         private PictureBox pictureBox3;
         private ComboBox cBoxFields;
         private Label label8;
-        private Button btnHelp;
         private RadioButton rBtnNormalScreen;
         private RadioButton rBtnWideScreen;
         private Label label2;
-        private Button btnGiessen;
+        private Button btnWater;
+        private Button btnHarvest;
     }
 }
